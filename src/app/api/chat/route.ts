@@ -60,9 +60,9 @@ export async function POST(request: NextRequest) {
         is_improving: emotionalAnalysis.improvement_trend === 'improving'
       },
       personalized_insights: personalizedInsights,
-      crisis_info: aiResponse.crisis_detected ? {
-        risk_level: aiResponse.risk_level,
-        resources: aiResponse.emergency_resources
+      crisis_info: aiResponse.crisisAlert ? {
+        risk_level: aiResponse.riskLevel,
+        resources: aiResponse.crisisAlert.emergency_resources || []
       } : null,
       emotionDetected: aiResponse.emotionDetected,
       riskLevel: aiResponse.riskLevel,
