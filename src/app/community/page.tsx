@@ -344,6 +344,8 @@ export default function CommunityPage() {
     </div>
   )
 }
+
+interface CommunityNote {
   note_id: string
   user_id: string
   author_name: string
