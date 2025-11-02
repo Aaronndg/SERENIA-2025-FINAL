@@ -1,14 +1,13 @@
-import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import './globals.css'
 import { AuthProvider } from '@/components/AuthProvider'
-import { AccessibilityPanel } from '@/components/AccessibilityPanel'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'SerenIA - Asistente Emocional y de Bienestar',
-  description: 'Tu compañero en el camino hacia el bienestar emocional con principios cristianos',
+  description: 'Tu compañero de bienestar emocional con principios cristianos',
 }
 
 export default function RootLayout({
@@ -21,7 +20,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <AuthProvider>
           {children}
-          <AccessibilityPanel />
         </AuthProvider>
       </body>
     </html>
